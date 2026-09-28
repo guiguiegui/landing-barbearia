@@ -332,7 +332,8 @@
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
   .craft-item:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .craft-num {
+  .craft-item::before {
+    content: attr(data-num);
     position: absolute;
     top: 6px;
     right: 16px;
@@ -360,7 +361,7 @@
     border-radius: 50%;
     background: var(--surface-2);
     border: 1px solid var(--line);
-    color: var(--accent);
+    color: var(--accent-strong);
     font-family: var(--font-display);
     font-size: 1.05rem;
     display: flex;
@@ -594,20 +595,16 @@
       <h2>Ofício</h2>
     </div>
     <div class="craft-grid">
-      <div class="craft-item">
-        <span class="craft-num">01</span>
+      <div class="craft-item" data-num="01">
         <div><h3>Tesoura fio navalha</h3><p>Pra cortes de precisão, sem puxar o fio do cabelo.</p></div>
       </div>
-      <div class="craft-item">
-        <span class="craft-num">02</span>
+      <div class="craft-item" data-num="02">
         <div><h3>Navalha reta</h3><p>Amolada à mão antes de cada barba, corte por corte.</p></div>
       </div>
-      <div class="craft-item">
-        <span class="craft-num">03</span>
+      <div class="craft-item" data-num="03">
         <div><h3>Toalha quente</h3><p>Abre os poros antes da navalha entrar — menos irritação, mais rente.</p></div>
       </div>
-      <div class="craft-item">
-        <span class="craft-num">04</span>
+      <div class="craft-item" data-num="04">
         <div><h3>Talco e pós-barba</h3><p>Fecha bem a pele no final, sem ardência.</p></div>
       </div>
     </div>
